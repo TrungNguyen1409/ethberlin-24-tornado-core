@@ -107,7 +107,7 @@ Example:
 
 1. `cp .env.example .env`
 1. Tune all necessary params
-1. `npx truffle migrate --network kovan --reset --f 2 --to 4`
+1. `npx truffle migrate --network sepolia --reset --f 2 --to 4`
 
 ## Deploy ERC20 Tornado Cash
 
