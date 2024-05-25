@@ -17,41 +17,15 @@ module.exports = {
     development: {
       host: '127.0.0.1', // Localhost (default: none)
       port: 8545, // Standard Ethereum port (default: none)
-      network_id: '*', // Any network (default: none)
+      network_id: '1716614029893', // Any network (default: none)
     },
-    kovan: {
+    sepolia: {
       provider: () =>
         new HDWalletProvider(
           process.env.PRIVATE_KEY,
-          'https://kovan.infura.io/v3/97c8bf358b9942a9853fab1ba93dc5b3',
+          'https://sepolia.infura.io/v3/4da7363666a14c46a3e69bbac0773c39',
         ),
-      network_id: 42,
-      gas: 6000000,
-      gasPrice: utils.toWei('1', 'gwei'),
-      // confirmations: 0,
-      // timeoutBlocks: 200,
-      skipDryRun: true,
-    },
-    goerli: {
-      provider: () =>
-        new HDWalletProvider(
-          process.env.PRIVATE_KEY,
-          'https://goerli.infura.io/v3/d34c08f2cb7c4111b645d06ac7e35ba8',
-        ),
-      network_id: 5,
-      gas: 6000000,
-      gasPrice: utils.toWei('1', 'gwei'),
-      // confirmations: 0,
-      // timeoutBlocks: 200,
-      skipDryRun: true,
-    },
-    rinkeby: {
-      provider: () =>
-        new HDWalletProvider(
-          process.env.PRIVATE_KEY,
-          'https://rinkeby.infura.io/v3/97c8bf358b9942a9853fab1ba93dc5b3',
-        ),
-      network_id: 4,
+      network_id: 11155111,
       gas: 6000000,
       gasPrice: utils.toWei('1', 'gwei'),
       // confirmations: 0,
@@ -76,7 +50,7 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-      version: '0.7.6',
+      version: '0.8.0',
       settings: {
         optimizer: {
           enabled: true,
